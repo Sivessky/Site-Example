@@ -1,0 +1,67 @@
+.mainTitle {
+   font-size: 250%;
+   display: flex;
+   margin-top: 40px;
+   margin-bottom: 20px;
+   justify-content: center;
+}
+
+.mainField {
+   display: flex;
+   justify-content: space-around;
+
+   div   {
+      background-color: rgba(140, 245, 240, 0.295);
+      height: 500px;
+      width: 400px;
+      border: 3px solid rgb(255, 255, 255);
+      border-radius:70px 20px 70px 20px;
+      box-shadow: 5px 10px 120px 15px rgb(255, 255, 255);
+      transition: all 2s ease-out;
+
+      h3 {
+         font-size: 150%;
+         color: rgb(252, 252, 252);
+         padding: 50px 50px 20px;
+      }
+      ul {
+         font-size: 130%;
+         color: white;
+         padding: 30px 20px 30px;
+         list-style: circle white;
+         li {
+            margin: 20px;
+         }
+      }
+      button {
+         background-color: rgba(140, 245, 240, 0.295);
+         border: 3px solid rgb(255, 255, 255);
+         color: white;
+         font-size: 140%;
+         height: 50px;
+         width: 100px;
+         border-radius: 40px;
+         margin-right: auto;
+         margin-left: 37%;
+      }
+
+      
+      button:hover {
+         color:rgb(103, 124, 221);
+         border: 3px solid rgb(103, 124, 221);
+         
+      }
+   }
+
+   div:hover {
+      transition: box-shadow 3s linear;
+      box-shadow: 5px 10px 120px 15px inset rgb(103, 124, 221);
+      transform: scale(1.2, 1.2);
+      transition: all 2s ease-out;
+   }
+
+   
+}
+
+
+

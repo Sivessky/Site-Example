@@ -1,0 +1,162 @@
+.mainreg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.mainreg #success {
+  position: absolute;
+  font-size: 50px;
+  background-color: #50aae6;
+  height: 80px;
+  width: 447px;
+  border-radius: 30px;
+  border: 4px solid white;
+  padding: 7px;
+  margin-top: 125px;
+}
+
+.mainreg .regField {
+  margin-top: 40px;
+  border: 3px solid white;
+  height: 400px;
+  width: 400px;
+  border-radius: 90px;
+  -webkit-box-shadow: 5px 10px 50px 15px white;
+          box-shadow: 5px 10px 50px 15px white;
+}
+
+.mainreg .regField .Title {
+  font-size: 30px;
+  color: white;
+  background-color: #4c72f0;
+  border-radius: 30px;
+  border: 2px solid white;
+  height: 37px;
+  width: 170px;
+  padding-top: 1px;
+  padding-left: 10px;
+  margin-left: 110px;
+  margin-top: -15px;
+}
+
+.mainreg .regField .rules {
+  background-color: #4c72f0;
+  color: #ffffff;
+  font-size: 30px;
+  height: 37px;
+  width: 90px;
+  border-radius: 30px;
+  padding-left: 9px;
+  padding-top: 1px;
+  margin-left: 150px;
+  margin-top: 10px;
+  border: 2px solid white;
+  -webkit-box-shadow: 0px 0px 7px 4px white;
+          box-shadow: 0px 0px 7px 4px white;
+}
+
+.mainreg .regField .rules:hover {
+  -webkit-box-shadow: 0px 0px 0px 0px white;
+          box-shadow: 0px 0px 0px 0px white;
+}
+
+.mainreg .regField input {
+  height: 40px;
+  width: 230px;
+  margin-left: 21%;
+  border-radius: 20px;
+  margin-top: 10px;
+  padding-left: 25px;
+}
+
+.mainreg .regField input:hover {
+  background-color: #a2b2e7;
+}
+
+.mainreg .regField input:focus {
+  background-color: #9fb5ff;
+  -webkit-box-shadow: 0px 0px 50px 15px white;
+          box-shadow: 0px 0px 50px 15px white;
+}
+
+.mainreg .regField .success {
+  position: absolute;
+  font-size: 50px;
+  background-color: #50aae6;
+  height: 80px;
+  width: 447px;
+  border-radius: 30px;
+  border: 4px solid white;
+  padding: 7px;
+  margin-top: -35px;
+  margin-right: 10%;
+}
+
+.mainreg .regField .enter {
+  font-size: 30px;
+  color: white;
+  background-color: #4c72f0;
+  border-radius: 30px;
+  border: 2px solid white;
+  height: 42px;
+  width: 170px;
+  padding-top: 0px;
+  padding-botoom: 0px;
+  margin-left: 110px;
+  margin-top: 15px;
+}
+
+.mainreg .regField .enter:hover {
+  background-color: #3558f5;
+  -webkit-box-shadow: 0px 0px 10px 5px white;
+          box-shadow: 0px 0px 10px 5px white;
+}
+
+.mainreg .regField .back {
+  background-color: #4c72f0;
+  color: #ffffff;
+  font-size: 30px;
+  height: 37px;
+  width: 90px;
+  border-radius: 30px;
+  margin-left: 150px;
+  margin-top: 10px;
+  border: 2px solid white;
+}
+
+.mainreg .regField .back:hover {
+  background-color: #3558f5;
+  -webkit-box-shadow: 0px 0px 7px 4px white;
+          box-shadow: 0px 0px 7px 4px white;
+}
+
+.mainreg .regField .mailText:invalid {
+  border: 2px solid red;
+}
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  width: 470px;
+  opacity: 0;
+  background-color: #4c72f0;
+  border-radius: 30px;
+  font-size: 20px;
+  border: 1px solid white;
+  -webkit-box-shadow: 0px 0px 7px 4px white;
+          box-shadow: 0px 0px 7px 4px white;
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+  top: 0px;
+  left: 100px;
+  padding: 10px 13px;
+}

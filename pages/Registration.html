@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../img/circle.png" type="image/png">
+
+    <!--Comments to everything except the filling field are present in the code of the main page-->
+    <!--Коментарии ко всему кроме поля заполнения присутсвуют в коде главной страницы-->
+
+    <link rel="stylesheet" href="../css/Null.css">
+    <link rel="stylesheet" href="../css/Basic.css">
+    <link rel="stylesheet" href="../css/Menu.css">
+    <link rel="stylesheet" href="../css/Registration.css">
+
+    <!--Registration.css created on SASS-->
+    <!--Registration.css написан на SASS-->
+
+    <title>Registration</title>
+</head>
+<body>
+    <header>
+
+        <div class="head">
+
+            <div><span class="Sives">Sives</span></div>
+
+            <div class="but">
+
+                <a href="#"><button type="submit" class="login"><font size="5" color="white">Login</font></button></a> 
+
+            </div>
+
+        </div>
+
+        <nav class="menu">
+
+            <ul>
+
+              <li><a href="../index.html">Main</a></li>
+              <li><a href="#">History</a>
+              
+                <ul>
+                  <li><a href="#">Tipical Beggining</a></li>
+                  <li><a href="#">Gray Tale</a></li>
+                  <li><a href="#">Too Epic Culmination</a></li>
+                  <li><a href="#">Dissapointed End</a></li>
+                </ul>
+              
+              </li>
+
+              <li class="forum"><a href="#">Forum</a>
+
+                <ul>
+                    <li class="forum1"><a href="#">Hating</a>
+                    
+                    <ul class="hate">
+                        <li><a href="#">Lite Hate</a></li>
+                        <li><a href="#">Agressive Hate</a></li>
+                    </ul>
+                
+                </li>
+                  <li><a href="#">Questions</a></li>
+                </ul>
+
+              </li>
+
+              <li><a href="#">Contacts</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <article class="mainreg">
+
+      
+
+      <div class="regField">
+
+        <div class="Title">Registration</div>
+
+        <div class="rules" data-tooltip="
+        Login should not contain symbols: *, &,%, $, £, ”. The password must contain 5 or more characters and not contain spaces, it must also match with repeat form. ">Rules</div>
+
+        <div class="login">
+
+          <input type="text" class="loginText" id="loginText" placeholder="Write Login">
+          
+        </div>
+        
+        <div class="pass">
+
+          <input type="text" class="passText" id="passText" placeholder="Write password">
+          
+        </div>
+
+        <div class="pass1">
+
+          <input type="text" class="passText1" id="passText1" placeholder="Repeat password">
+          
+        </div>
+
+        <div class="mail">
+
+          <input type="email" class="mailText" id="mailText" placeholder="Write EMail">
+          
+          <!--HTML-side mail input validation-->
+          <!--Проверка верности ввода почты на стороне HTML-->
+
+        </div>
+        
+        <div class="enterholder">
+
+          <button type="submit" class="enter" onclick="register()">Register</button>
+
+        </div>
+
+        <div class="exitholder">
+
+          <a href="../index.html"><button class="back">Back</button></a>
+
+        </div>
+        
+        <!--I don't know what else can be commented out in the above code, just an input field-->
+        <!--Не знаю, что еще в вышележащем коде можно прокоментировать, просто поле для ввода-->
+
+        <script >
+
+          function register() {
+
+            //The first 4 conditions check the filling of the fields, in the case of an empty field, it changes the border of the field and terminates the function
+            //Первые 4 условия проверяют заполнение полей, в случае пустого поля меняет обводку поля и прекращает выполнение функции
+
+            if (document.getElementById("loginText").value == "") {
+
+              console.log("Login field is empty")
+              document.getElementsByClassName("loginText")[0].style = "border: 2px solid red"
+              return false
+              
+            } else if (document.getElementById("passText").value == "") {
+
+              console.log("First password field is empty")
+              document.getElementsByClassName("passText")[0].style = "border: 2px solid red"
+              return false
+              
+            } else if (document.getElementById("passText1").value == "") {
+
+              console.log("Second password field is empty")
+              document.getElementsByClassName("passText1")[0].style = "border: 2px solid red"
+              return false
+              
+            } else if (document.getElementById("mailText").value == "") {
+
+              console.log("EMail field is empty")
+              document.getElementsByClassName("mailText")[0].style = "border: 2px solid red"
+              return false
+              
+            //The following conditions check the content entered by the user
+            //Следующие улосвия проверяют содержимое внесенное пользователем
+
+            } else if (document.getElementById("loginText").value.includes("*") ||
+                      document.getElementById("loginText").value.includes("&") ||
+                      document.getElementById("loginText").value.includes("%") ||
+                      document.getElementById("loginText").value.includes("$") ||
+                      document.getElementById("loginText").value.includes("£") ||
+                      document.getElementById("loginText").value.includes("”")) {
+
+              console.log("Login contains some of: *, &, %, $, £, ”.")
+              document.getElementsByClassName("loginText")[0].style = "border: 2px solid red"
+              return false
+
+              //Checking the login for the presence of some characters, for example: *, &, %, $, £, ”.
+              //Проверка логина на наличие каких то символов, например: *, &, %, $, £, ”.
+
+            } else if (document.getElementById("passText").value.length < 5) {
+
+              console.log("Password field contains less than 5 characters")
+              document.getElementsByClassName("passText")[0].style = "border: 2px solid red"  
+              return false
+
+              //Password check for 5 or more characters
+              //Проверка пароля на наличие 5 и более символов
+
+            } else if (document.getElementById("passText").value.includes(" ")) {
+
+              console.log("Password field contain space")
+              document.getElementsByClassName("passText")[0].style = "border: 2px solid red"  
+              return false
+
+              //Checking password for spaces
+              //Проверка пароля на наличие пробелов
+
+            } else if (document.getElementById("passText").value !== document.getElementById("passText1").value) {
+
+              console.log("Passwords mismatch")
+              document.getElementsByClassName("passText")[0].style = "border: 2px solid red"
+              document.getElementsByClassName("passText1")[0].style = "border: 2px solid red"
+              return false
+
+              //Checking the coincidence of the first entered password and the second
+              //Проверка совпадения первого вводимого пароля и второго
+
+            } else {
+
+              console.log("All rules are met!")
+              
+              document.getElementById("success").hidden = false
+
+              function newWin() {
+              window.open ("../index.html",'_self', false)
+              }
+
+              setTimeout(newWin, 2000)
+
+              //If all of the above is observed, hidden is removed from the "registration successful" block and after 2 seconds the user is transferred to the main page
+              //Если все вышеперечисленное соблюдено - снимается hidden с блока "регистрация успешна" и через 2 сек переносит пользователя на главную страницу
+
+            }
+        }
+        </script>
+
+      </div>
+
+      <div id="success" hidden>Registration success!</div>
+      
+
+
+    </article>
+    <footer>
+        <div class="foot">
+
+            <a href="https://telegram.im/" target="_blank" class="tel"><img src="../img/tg.png" width="50px"></a>
+            <span class="cr">All right not reserved! ©</span>
+            <a href="https://www.facebook.com/" target="_blank" class="fb"><img src="../img/fb.png" width="50px"></a> 
+
+        </div>
+    </footer>
+  
+</body>
+</html>

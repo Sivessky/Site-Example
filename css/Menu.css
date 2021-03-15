@@ -1,0 +1,58 @@
+.menu ul li{
+  padding: 10px;
+}
+.menu ul > li:hover{
+  background-color: rgb(76, 114, 240);
+}
+.menu ul ul > li:hover{
+  background-color: rgba(150, 180, 231, 0.726);
+}
+.menu ul li, .menu ul{
+  display: inline-block;
+}
+.menu ul{
+  font-size: 200%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(51, 71, 255);
+}
+.menu ul ul{
+  font-size: 80%;
+  display: none;
+  position: absolute;
+  background-color: rgb(84, 132, 180);
+  margin-top: 10px;
+  margin-left: -65px;
+}
+.menu ul a{
+  color: #fff;
+  text-decoration: none;
+}
+.menu ul ul a{
+  color: #fff;
+  text-decoration: none;
+}
+.menu li:hover ul{
+  display: block;
+}
+ 
+.menu li:hover li{
+  display: block;
+}
+
+.menu .forum ul {
+  margin-left: -17px;
+}
+
+.menu .forum .forum1 .hate {
+  font-size: 100%;
+  margin-left: 99px;
+  margin-top: -32px;
+  width: 160px;
+  display: none;
+}
+
+.menu .forum .forum1:hover .hate{
+  display: block;
+} 

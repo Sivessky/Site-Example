@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="img/circle.png" type="image/png">
+    
+    <link rel="stylesheet" href="css/Null.css">
+    <link rel="stylesheet" href="css/Basic.css">
+    <link rel="stylesheet" href="css/Menu.css">
+    <link rel="stylesheet" href="css/MainPage.css">
+
+    <!--Why is there so much CSS? That's why:
+        Null - resets different browsers defaults,
+        Menu - site navigation, written without preprocessors,
+        Basic - design of the header and footer of the site (on SCSS),
+        Main Page - design of the main page content (SCSS).
+        It was possible to fit everything into one file, but this way my work is clearer for undestanding(in my humble opinion)-->
+    <!--Почему так много CSS? Вот почему:
+        Null - сбрасывает настройки по умолчанию браузеров, 
+        Menu - навигация по сайту, написана без препроцессоров,
+        Basic - оформление шапки и подвала(не знаю как footer перевести лучше) сайта (на SCSS),
+        Main Page - оформление содержимого заглавной странцы(SCSS).
+        Можно было все уместить в один файл, но так моя работа нагляднее(на мое скромное мнение)-->
+
+    <title>Main Page</title>
+
+</head>
+<body>
+    <header>
+
+        <div class="head">
+
+            <div><span class="Sives">Sives</span></div>
+            <div class="but">
+
+                <!--There is no need in <font> below, can do it in CSS, but why not?-->
+                <!--В теге <font>, что ниже, нужды особо нет, но я могу-->
+
+                <a href="#"><button type="submit" class="login"><font size="5" color="white">Login</font></button></a>
+                <a href="pages/Registration.html"><button type="submit" class="reg"><font size="5" color="white">Registration</font></button></a>
+
+            </div>
+
+        </div>
+
+        <nav class="menu">
+
+            <!--A drop-down menu in the drop-down menu is also present, just for example. Completed on pure CSS-->
+            <!--Выпадающее меню в выпадающим меню тоже присутсвует, чисто для примера. Выполнено чисто на CSS-->
+
+            <ul>
+
+              <li><a href="#">Main</a></li>
+              <li><a href="#">History</a>
+              
+                <ul>
+                  <li><a href="#">Tipical Beggining</a></li>
+                  <li><a href="#">Gray Tale</a></li>
+                  <li><a href="#">Too Epic Culmination</a></li>
+                  <li><a href="#">Dissapointed End</a></li>
+                </ul>
+              
+              </li>
+              <li class="forum"><a href="#">Forum</a>
+
+                <ul>
+                    <li class="forum1"><a href="#">Hating</a>
+                    
+                    <ul class="hate">
+                        <li><a href="#">Lite Hate</a></li>
+                        <li><a href="#">Agressive Hate</a></li>
+                    </ul>
+                
+                </li>
+
+                  <li><a href="#">Questions</a></li>
+
+                </ul>
+
+              </li>
+
+              <li><a href="#">Contacts</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+    <article class="main">
+
+        <!--2 cells with an example of animation on SCSS-->
+        <!--2 ячейки с примером анимации через SCSS-->
+
+        <div class="mainTitle">What we have here?</div>
+        <div class="mainField">
+
+            <div id="mainText">
+
+                <h3 class="mainTextTitle">В данном примере присутсвует:</h3>
+
+                    <ul>
+
+                        <li>Простое визуальное оформление ( при помощи CSS, SCSS и SASS )</li>
+                        <li>Подключение стороннего шрифта через файл ( на примере слова "Sives" в огралвлении )</li>
+                        <li>Проверка заполнения на странице регистранции с использованием JavaScript ( на стороне пользователя )</li>
+                    
+
+                    </ul>
+                
+                <button type="submit" onclick="dwld()">Скачать</button>
+                
+            </div>
+
+            <div class="mainText2">
+                <h3 class="mainTextTitle2">In this example, there is:</h3>
+
+                    <ul>
+
+                        <li>Simple visual design (using CSS, SCSS and SASS)</li>
+                        <li>Connecting a non-standard font through a file ( for example, the word "Sives" in the top )</li>
+                        <li>Checking the filling of the registration page using JavaScript ( user-side ) </li>
+
+                    </ul>
+                
+                <button type="submit" id="dwld1" onclick="dwld1()">Download</button>
+
+            </div> 
+
+        </div>
+
+    </article>
+    <footer>
+        
+        <!--A footnote sticking to a window with suggested information and contacts. Why does it stick? Demonstration-->
+        <!--Сноска прилипающая к окну с предполагаемой информацией и контактами. Почему липнет? Демонастрация-->
+        
+        <div class="foot">
+
+            <a href="https://telegram.im/" target="_blank" class="tel"><img src="img/tg.png" width="50px"></a>
+            <span class="cr">All right not reserved! ©</span>
+            <a href="https://www.facebook.com/" target="_blank" class="fb"><img src="img/fb.png" width="50px"></a> 
+
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/Core.js"></script>
+
+    <!--Saving is implemented in the file-->
+    <!--В файле реализовано сохранение-->
+
+</body>
+</html>

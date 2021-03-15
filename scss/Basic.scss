@@ -1,0 +1,90 @@
+@font-face {
+	font-family: 'Russo';
+	font-display: swap;
+	src: local("O"), 
+			url("../fonts/RussoOne-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+   //Подключение стороннего шрифта оффлайн
+   //Connecting a non-standard font offline
+}
+
+body {
+   background-color: rgb(156, 204, 243);
+   header {
+      background-color: rgb(33, 159, 209);
+
+      .head {
+         display: flex;
+         height: 150px;
+
+         .but {
+
+            
+            margin-top: auto;
+            margin-right: 20px;
+            margin-left: auto;
+            margin-bottom: 15px;
+         
+
+            .login {
+               background-color: DarkBlue;
+               border-radius: 50px;
+               height: 40px;
+               width: 100px;
+               margin-right: 10px;
+         
+         
+            }
+
+            .login:hover {
+               background-color: RoyalBlue;
+            }
+
+            .reg {
+               background-color: DarkBlue;
+	            border-radius: 50px;
+	            height: 40px;
+	            width: 170px;
+	         
+            
+            }
+
+            .reg:hover {
+               background-color: RoyalBlue;
+            }
+         }
+      }
+
+     
+      .Sives {
+         position: absolute;
+         font-size: 700%;
+         font-family: Russo;
+         //Использование стороннего шрифта оффлайн
+         //Using a non-standard font offline
+         padding: 30px 40px;
+      }
+
+      
+   }
+
+   footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 80px;
+      
+      background-color: rgba(147, 190, 228, 0.795);
+      border-top: 5px double rgb(61, 78, 233);
+      .cr {
+         margin: 20px;  
+         font-size: 140%;
+         color: rgb(6, 30, 165);
+      }
+   }
+}

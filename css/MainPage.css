@@ -1,0 +1,78 @@
+.mainTitle {
+  font-size: 250%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mainField {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.mainField div {
+  background-color: rgba(140, 245, 240, 0.295);
+  height: 500px;
+  width: 400px;
+  border: 3px solid white;
+  border-radius: 70px 20px 70px 20px;
+  -webkit-box-shadow: 5px 10px 120px 15px white;
+          box-shadow: 5px 10px 120px 15px white;
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
+
+.mainField div h3 {
+  font-size: 150%;
+  color: #fcfcfc;
+  padding: 50px 50px 20px;
+}
+
+.mainField div ul {
+  font-size: 130%;
+  color: white;
+  padding: 30px 20px 30px;
+  list-style: circle white;
+}
+
+.mainField div ul li {
+  margin: 20px;
+}
+
+.mainField div button {
+  background-color: rgba(140, 245, 240, 0.295);
+  border: 3px solid white;
+  color: white;
+  font-size: 140%;
+  height: 50px;
+  width: 100px;
+  border-radius: 40px;
+  margin-right: auto;
+  margin-left: 37%;
+}
+
+.mainField div button:hover {
+  color: #677cdd;
+  border: 3px solid #677cdd;
+}
+
+.mainField div:hover {
+  -webkit-transition: -webkit-box-shadow 3s linear;
+  transition: -webkit-box-shadow 3s linear;
+  transition: box-shadow 3s linear;
+  transition: box-shadow 3s linear, -webkit-box-shadow 3s linear;
+  -webkit-box-shadow: 5px 10px 120px 15px inset #677cdd;
+          box-shadow: 5px 10px 120px 15px inset #677cdd;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
